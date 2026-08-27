@@ -13,5 +13,10 @@ return [
     "totalFinal" => $totalfinal
 ];
 }
+function calculoFrete($valorTotal){
+    $frete = $valorTotal *(10/100);
+    $totalFrete = $frete + $valorTotal;
+return $totalFrete;
+}
 
 ?>
