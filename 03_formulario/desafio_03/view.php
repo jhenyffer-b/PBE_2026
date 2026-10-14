@@ -20,11 +20,8 @@
             Viaje para novos destinos!
         </h3>
 
-        <img 
-            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05"
-            width="100%"
-            height="250"
-        >
+        <img src="viaviagens.png" alt="VIA viagens"
+            style="width: 100%; height: 390px; object-fit: fill;">
 
         <hr>
 

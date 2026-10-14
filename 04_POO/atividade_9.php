@@ -23,11 +23,14 @@ class Produto{
     }
 
     public function exibirInfo(){
-             $precoFormatado = number_format($this->preco, 2, ',', '.');
-             echo "Nome: $this->nome, Preço: R$ $precoFormatado, Estoque: $this->estoque <br>";
+             echo "Nome → " . $this->nome . "<br>";
+             echo "Preço: R$ " .  number_format($this->preco, 2, ',', '.') . 
+             "<br>";
+            echo  "| Estoque: " . $this->estoque . "<br>";
     }
  }
  $produto = new Produto("Perfume Good Girl Blush", 570, 10);
  $produto->vender(4);
  $produto->reajustarPreco(10);
  $produto->exibirInfo();
+
