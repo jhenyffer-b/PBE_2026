@@ -29,7 +29,3 @@ class Filme{
         }
     }
 }
-$filme1 = new Filme("Crepúsculo", "Romace", 145, "Sim");
-$filme1->marcarComoAssistido(true);
-$carro1->frear(10);
-echo $carro1->verVelocidade () . "km"
