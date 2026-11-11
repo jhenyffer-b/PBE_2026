@@ -1,11 +1,11 @@
 <?php
 class Aluno{
-    private string $nome;
-    private string $turma;
-    private float $nota1;
-    private float $nota2;
-    private float $nota3;
-    private int $faltas;
+    private $nome;
+    private $turma;
+    private $nota1;
+    private $nota2;
+    private $nota3;
+    private $faltas;
 
      public function __construct($nome, $turma, $nota1, $nota2, $nota3, $faltas){
         $this->nome = $nome;
