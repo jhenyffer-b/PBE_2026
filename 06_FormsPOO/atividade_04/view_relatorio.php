@@ -7,7 +7,7 @@
 <body>
 
     <h1>Contrato de Matrícula 🏋️‍♀️🔥</h1>
-    
+
     <p><strong>Aluno:</strong> <?= $matricula->getAluno()->getNome() ?></p>
     <p><strong>IMC:</strong> <?= number_format($matricula->getAluno()->calcularIMC(), 1) ?></p>
     <p><strong>Classificação:</strong> <?= $matricula->getAluno()->classificarIMC() ?></p>
@@ -16,7 +16,7 @@
     <h3>Detalhamento da Mensalidade</h3>
     <table border="1">
         <tr>
-            <th>Item</th>
+            <th>Descrição</th>
             <th>Valor</th>
         </tr>
 

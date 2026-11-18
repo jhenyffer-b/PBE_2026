@@ -2,16 +2,15 @@
 <?php
 
 class Matricula {
-
     private $aluno;
     private $plano;
     private $meses;
     private $modalidades;
 
-    public function __construct($aluno, $plano, $meses, $modalidades = []) {
+    public function __construct($aluno, $plano, $meses, $modalidades){
         $this->aluno = $aluno;
         $this->plano = $plano;
-        $this->meses = (int) $meses;
+        $this->meses = $meses;
         $this->modalidades = $modalidades;
     }
 
@@ -33,11 +32,11 @@ class Matricula {
 
     public function calcularValorPlano() {
 
-        if ($this->plano == "Básico") {
+        if ($this->plano == "basico") {
             return 80.00;
-        } elseif ($this->plano == "Plus") {
+        } elseif ($this->plano == "plus") {
             return 120.00;
-        } elseif ($this->plano == "Premium") {
+        } elseif ($this->plano == "premium") {
             return 180.00;
         } else {
             return 0.00;
@@ -45,20 +44,16 @@ class Matricula {
     }
 
     public function calcularValorModalidade($modalidade) {
-
-        if ($modalidade == "Natação") {
+        if ($modalidade == "natacao") {
             return 60.00;
-        } elseif ($modalidade == "Funcional") {
+        } elseif ($modalidade == "funcional") {
             return 40.00;
-        } elseif ($modalidade == "Lutas") {
-            return 50.00;
-        } else {
-            return 0.00;
+        }else{
+             return 50.00;
         }
     }
 
     public function calcularMensalidade() {
-
         $total = $this->calcularValorPlano();
 
         foreach ($this->modalidades as $modalidade) {
@@ -69,12 +64,11 @@ class Matricula {
     }
 
     public function calcularPercentualDesconto() {
-
-        if ($this->meses >= 12) {
+        if ($this->meses >= 12){
             return 20;
-        } elseif ($this->meses >= 6) {
+        } elseif ($this->meses >= 6){
             return 10;
-        } else {
+        }else{
             return 0;
         }
     }
@@ -84,11 +78,9 @@ class Matricula {
     }
 
     public function calcularDesconto() {
-
-        $subtotal = $this->calcularSubtotal();
-        $percentual = $this->calcularPercentualDesconto();
-
-        return $subtotal * ($percentual / 100);
+        return $this->calcularSubtotal() *
+        $this->calcularPercentualDesconto()/100;
+       
     }
 
     public function calcularTotal() {
